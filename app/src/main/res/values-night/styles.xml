@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="textColor.Day" parent="">
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="textColor.Day.Light">
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+    <style name="textColor.Day.Regular">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+    <style name="textColor.Day.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="textColor.Day.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="textColor.Dark" parent="">
+        <item name="android:textColor">@color/cream</item>
+    </style>
+
+    <style name="textColor.Dark.Light">
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+    <style name="textColor.Dark.Regular">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+    <style name="textColor.Dark.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="textColor.Dark.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="ImageView"/>
+    <style name="ImageView.RoundedCorner">
+        <item name="cornerSize">8%</item>
+    </style>
+    <style name="ImageView.StoryAdapter">
+        <item name="cornerSize">4%</item>
+    </style>
+
+    <style name="ImageView.DetailActivity">
+        <item name="cornerSize">4%</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+
+    </style>
+
+    <style name="ImageView.Avatar">
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="StoryApss.Button.Filled" parent="Widget.Material3.Button">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.StoryApps.Button</item>
+    </style>
+
+    <style name="StoryApss.Button.Outline" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.StoryApps.Button</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.StoryApps.Button" parent="">
+        <item name="cornerSize">15%</item>
+    </style>
+
+    <style name="StatusBar.StoryApps.Transparent.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="titleTextAppearance">@style/TextAppearance.StoryApps.Appbar.Bold</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.StoryApps.Appbar.Regular</item>
+        <item name="contentInsetStartWithNavigation">6dp</item>
+    </style>
+
+    <style name="TextAppearance.StoryApps.Appbar.Bold" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/cream</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.010</item>
+    </style>
+
+    <style name="TextAppearance.StoryApps.Appbar.Regular" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/cream</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.010</item>
+    </style>
+</resources>

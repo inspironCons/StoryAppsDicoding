@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="coral">#F79489</color>
+    <color name="dusty_rose">#F8AFA6</color>
+    <color name="rose_quartz">#FADCD9</color>
+    <color name="cream">#F9F1F0</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_color">#F2F2F2</color>
+    <color name="red_rose">#C82151</color>
+    <color name="text_color">#403B50</color>
+    <color name="form_color">#F6F6F7</color>
+    <color name="black_50">#FF000000</color>
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+</resources>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Story Apss</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or">Or</string>
+    <string name="create_account_story_app">Sign Up</string>
+    <string name="register">Create Account</string>
+    <string name="name">username</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="title_cameras">Camera</string>
+
+    <string name="save">Save</string>
+    <string name="need_permission">Need Permission</string>
+    <string name="need_permission_desc">you need permission %s , goes to setting</string>
+    <string name="go_to_setting">to Setting</string>
+    <string name="error_take_picture">Failure take a picture</string>
+    <string name="no_image">Image file not found</string>
+    <string name="failed_launch_camera">Failure starting a Camera</string>
+    <string name="chooser_image">Choose Image</string>
+
+    <string name="back">Back</string>
+    <string name="title_expired">session over</string>
+    <string name="supporting_text">Session is over , please Re login</string>
+    <string name="ok">OK</string>
+    <string name="hello_bestie">Hello My Friend</string>
+    <string name="greeting_name">Hai, Welcome %s</string>
+    <string name="discover">Explore all story from around of dicoding student</string>
+    <string name="loading">Loading...</string>
+    <string name="lokasi_sampe">Dimana mana hatiku senang</string>
+    <string name="create_story">Story</string>
+    <string name="change_language">Change Language</string>
+    <string name="logout">Logout</string>
+    <string name="register_now">Create Account Now</string>
+    <string name="easy_register">Easy create Easy to Explore</string>
+    <string name="appwidget_text">Story List Apps</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="not_data">No Data</string>
+    <string name="upload">Upload</string>
+    <string name="geoLocationPermission">Get your precise location</string>
+    <string name="location_not_found">Location is not found. Try Again</string>
+
+</resources>

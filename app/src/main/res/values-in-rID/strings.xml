@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Story Apss</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="sign_in">Masuk</string>
+    <string name="or">Atau</string>
+    <string name="create_account_story_app">Daftar</string>
+    <string name="register">Buat Akun</string>
+    <string name="name">username</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="title_cameras">Kamera</string>
+
+    <string name="save">Simpan</string>
+    <string name="need_permission">Perlu Pesetujuan</string>
+    <string name="need_permission_desc">kamu perlu menyetujui %s , harap ke pengaturan aplikasi</string>
+    <string name="go_to_setting">Ke Pengaturan</string>
+    <string name="error_take_picture">Gagal mengambil foto</string>
+    <string name="no_image">Tidak ada file gambar di direktori kamu</string>
+    <string name="failed_launch_camera">Gagal memunculkan kamera.</string>
+    <string name="chooser_image">Pilih Gambar</string>
+
+    <string name="back">Kembali</string>
+    <string name="title_expired">Sesi Habis</string>
+    <string name="supporting_text">Login kembali karena sesi sudah kadaluarsa</string>
+    <string name="ok">OK</string>
+    <string name="hello_bestie">Hallo Sahabat</string>
+    <string name="discover">Eksplorasi beragam cerita dari peserta dicoding</string>
+    <string name="loading">Memuat...</string>
+    <string name="lokasi_sampe">Dimana mana hatiku senang</string>
+    <string name="create_story">Story</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="logout">Keluar</string>
+    <string name="greeting_name">Hai, Selamat Datang %s</string>
+    <string name="register_now">Buat Akunmu Sekarang</string>
+    <string name="easy_register">Cukup Mudah dalam hitungan detik bro</string>
+    <string name="not_data">No Data</string>
+    <string name="appwidget_text">Daftar Story</string>
+    <string name="add_widget">Tambah widget</string>
+    <string name="app_widget_description">Widget untuk menampilkan daftar cerita</string>
+    <string name="upload">Upload</string>
+    <string name="geoLocationPermission">kirimkan lokasi kamu saat ini</string>
+    <string name="location_not_found">Lokasi tidak ditemukan , silahkan coba lagi</string>
+</resources>
