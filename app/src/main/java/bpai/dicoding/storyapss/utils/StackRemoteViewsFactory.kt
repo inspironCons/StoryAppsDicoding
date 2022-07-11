@@ -10,14 +10,13 @@ import android.widget.RemoteViewsService
 import androidx.core.os.bundleOf
 import bpai.dicoding.storyapss.R
 import bpai.dicoding.storyapss.StoryStackWidget
-import bpai.dicoding.storyapss.data.remote.network.stories.IStoriesApi
-import bpai.dicoding.storyapss.data.repository_impl.StoriesRepositoryImpl
-import bpai.dicoding.storyapss.di.NetworkModule
+import bpai.dicoding.storyapss.domain.repository.IStoriesRepository
 import com.bumptech.glide.Glide
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 internal class StackRemoteViewsFactory(
     private val mContext:Context
@@ -26,11 +25,11 @@ internal class StackRemoteViewsFactory(
     private val job = SupervisorJob()
     private val coroutineScope = CoroutineScope(Dispatchers.IO + job)
 
-    private val api = NetworkModule().buildService(IStoriesApi::class.java)
-    private lateinit var repo:StoriesRepositoryImpl
+    @Inject lateinit var repo:IStoriesRepository
     override fun onCreate() {
-        repo = StoriesRepositoryImpl(api)
+
     }
+
 
     override fun onDataSetChanged() {
         val identityToken = Binder.clearCallingIdentity()

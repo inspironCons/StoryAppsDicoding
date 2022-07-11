@@ -1,24 +1,31 @@
 package bpai.dicoding.storyapss.data.remote.local.stories
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import bpai.dicoding.storyapss.model.Stories
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "stories")
 data class StoriesEntity(
     @PrimaryKey
-    @field:SerializedName("id")
+    @ColumnInfo(name = "id")
     val id:String,
 
-    @field:SerializedName("username")
+    @ColumnInfo("username")
     val username:String,
 
-    @field:SerializedName("photoUrl")
+    @ColumnInfo("photoUrl")
     val photoUrl:String,
 
-    @field:SerializedName("latitude")
-    val latitude:Float,
+    @ColumnInfo("description")
+    val description:String,
 
-    @field:SerializedName("longitude")
-    val longitude:Float,
-)
+    @ColumnInfo("latitude")
+    val latitude:Double,
+
+    @ColumnInfo("longitude")
+    val longitude:Double,
+){
+    fun toStories() = Stories(id,username,photoUrl,description,latitude,longitude)
+}

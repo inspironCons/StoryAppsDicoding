@@ -1,5 +1,6 @@
 package bpai.dicoding.storyapss.data.remote.network.stories
 
+import bpai.dicoding.storyapss.data.remote.local.stories.StoriesEntity
 import bpai.dicoding.storyapss.model.Stories
 import com.google.gson.annotations.SerializedName
 
@@ -20,6 +21,15 @@ object StoriesDto {
         @SerializedName("lon") var lon: Double
     ){
         fun toStories(): Stories = Stories(id,name,photoUrl,description)
+
+        fun toStoriesEntity():StoriesEntity = StoriesEntity(
+            id = id,
+            username = name,
+            photoUrl = photoUrl,
+            description = description,
+            latitude = lat,
+            longitude = lon
+        )
     }
 
     data class ResponseCreate(

@@ -9,7 +9,9 @@ data class Stories(
     val id:String,
     val name: String,
     val image: String,
-    val description:String
+    val description:String,
+    val lat:Double = 0.0,
+    val lon:Double = 0.0
 ):Parcelable
 
 data class CreateStory(

@@ -12,6 +12,7 @@ import kotlinx.coroutines.*
 class Session:Service() {
     private val job = Job()
     private val serviceScope = CoroutineScope(Dispatchers.Main+job)
+
     private fun startSessionService(name:String?, token:String?){
         Prefs.putString(ConstantName.PREFS_username,name)
         Prefs.putString(ConstantName.PREFS_token,token)

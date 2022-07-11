@@ -13,15 +13,20 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class DatabaseModule {
+object DatabaseModule {
     @Singleton
     @Provides
-    fun database(@ApplicationContext app: Context) = Room.databaseBuilder(
-        app,
+    fun database(@ApplicationContext app: Context) = Room.databaseBuilder(app,
         StoryDb::class.java,
-        ConstantName.DATABASE_NAME
-    ).build()
+        ConstantName.DATABASE_NAME)
+        .fallbackToDestructiveMigration()
+        .build()
 
     @Singleton
+    @Provides
     fun provideStoriesDao(database: StoryDb) = database.storiesDao()
+
+    @Singleton
+    @Provides
+    fun provideRemoteKeysDao(database: StoryDb) = database.remotesKeysDao()
 }

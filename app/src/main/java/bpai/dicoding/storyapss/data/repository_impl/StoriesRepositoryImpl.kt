@@ -1,7 +1,10 @@
 package bpai.dicoding.storyapss.data.repository_impl
 
+import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import bpai.dicoding.storyapss.data.remote.local.stories.StoriesDao
+import bpai.dicoding.storyapss.data.remote.local.stories.StoriesEntity
 import bpai.dicoding.storyapss.data.remote.network.stories.IStoriesApi
 import bpai.dicoding.storyapss.domain.repository.IStoriesRepository
 import bpai.dicoding.storyapss.model.CreateStory
@@ -19,31 +22,10 @@ import retrofit2.HttpException
 import javax.inject.Inject
 
 class StoriesRepositoryImpl @Inject constructor(
-    private val storiesApi: IStoriesApi
+    private val storiesApi: IStoriesApi,
+    private val dao:StoriesDao
 ): IStoriesRepository {
-    override fun getListStories() = object : PagingSource<Int, Stories>() {
-        override fun getRefreshKey(state: PagingState<Int, Stories>): Int? = state
-            .anchorPosition?.let { anchorPosition->
-                val page = state.closestPageToPosition(anchorPosition)
-                page?.prevKey?.plus(1) ?: page?.nextKey?.minus(1)
-            }
-
-        override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Stories> {
-            return try {
-                val pageNumber= params.key?: ConstantName.FIRST_PAGE_HISTORY
-                val history = storiesApi.stories(page = pageNumber, size = ConstantName.PAGE_SIZE_HISTORY)
-
-                LoadResult.Page(
-                    data = history.listStory.map { it.toStories() },
-                    prevKey = null,
-                    nextKey = if(history.listStory.isNotEmpty()) pageNumber +1 else null
-                )
-            }catch (e:Exception){
-                LoadResult.Error(e)
-            }
-        }
-
-    }
+    override fun getListStories(): PagingSource<Int, StoriesEntity> = dao.getAllStories()
 
     override suspend fun createStory(payload: CreateStory): Flow<Result<Pair<Boolean, String>>> = flow {
         try {
