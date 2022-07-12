@@ -43,7 +43,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun whenInputForm() {
-        binding.etName.addTextChangedListener { text-> viewModel.setName(text.toString())}
+        binding.etUsername.addTextChangedListener { text-> viewModel.setName(text.toString())}
         binding.etEmail.addTextChangedListener { text-> viewModel.setEmail(text.toString())}
         binding.etPassword.addTextChangedListener { text->viewModel.setPassword(text.toString()) }
     }
