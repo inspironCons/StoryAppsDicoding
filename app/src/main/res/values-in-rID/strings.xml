@@ -40,4 +40,5 @@
     <string name="upload">Upload</string>
     <string name="geoLocationPermission">kirimkan lokasi kamu saat ini</string>
     <string name="location_not_found">Lokasi tidak ditemukan , silahkan coba lagi</string>
+    <string name="username">Username</string>
 </resources>
