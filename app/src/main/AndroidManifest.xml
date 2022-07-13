@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="bpai.dicoding.storyapss" >
-
+    package="bpai.dicoding.storyapss">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,6 +11,8 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".App"
@@ -21,10 +22,32 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.StoryApps" >
+        android:theme="@style/Theme.StoryApps">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+
+        <activity
+            android:name=".presentation.story.base_on_maps.StoryBasedOnMap"
+            android:exported="false"
+            android:label="@string/title_activity_story_based_on_map"
+            android:theme="@style/Theme.StoryApps.NoActionBar"/>
+
         <receiver
             android:name=".StoryStackWidget"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -37,7 +60,7 @@
         <activity
             android:name=".presentation.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.StoryApps.NoActionBar" >
+            android:theme="@style/Theme.StoryApps.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,23 +82,23 @@
         <activity
             android:name=".presentation.story.detail.StoryActivity"
             android:exported="false"
-            android:theme="@style/Theme.StoryApps.NoActionBar"/>
+            android:theme="@style/Theme.StoryApps.NoActionBar" />
         <activity
             android:name=".presentation.story.create.CreateStoryActivity"
             android:exported="false"
-            android:theme="@style/Theme.StoryApps.NoActionBar"/>
+            android:theme="@style/Theme.StoryApps.NoActionBar" />
         <activity
             android:name=".presentation.camera.CameraStoryActivity"
             android:exported="false"
-            android:theme="@style/Theme.StoryApps.NoActionBar"/>
+            android:theme="@style/Theme.StoryApps.NoActionBar" />
 
         <service
             android:name=".utils.Session"
             android:enabled="true"
             android:exported="false" />
-
-        <service android:name=".utils.StackWidgetService"
-            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <service
+            android:name=".utils.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
     </application>
 
 </manifest>

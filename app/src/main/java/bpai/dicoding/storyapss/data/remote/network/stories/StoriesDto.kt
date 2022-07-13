@@ -20,7 +20,7 @@ object StoriesDto {
         @SerializedName("lat") var lat: Double,
         @SerializedName("lon") var lon: Double
     ){
-        fun toStories(): Stories = Stories(id,name,photoUrl,description)
+        fun toStories(): Stories = Stories(id,name,photoUrl,description,lat,lon)
 
         fun toStoriesEntity():StoriesEntity = StoriesEntity(
             id = id,

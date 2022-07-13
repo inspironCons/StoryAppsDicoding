@@ -9,8 +9,11 @@
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/drawable/ic_language.xml" value="0.2275" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2025" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/drawable/ic_location.xml" value="0.2275" />
+        <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/drawable/ic_location_camera.xml" value="0.1735" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/drawable/ic_logout.xml" value="0.2275" />
+        <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/drawable/ic_map.xml" value="0.185" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/drawable/ic_menu.xml" value="0.2275" />
+        <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/activity_based_on_maps.xml" value="0.17604166666666668" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/activity_camera_story.xml" value="0.15" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/activity_create_story.xml" value="0.25" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/activity_home.xml" value="0.2" />
@@ -19,6 +22,7 @@
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/activity_splash.xml" value="0.12864583333333332" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/activity_story.xml" value="0.25" />
+        <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/activity_story_based_on_map.xml" value="0.272108843537415" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/dialog_view_loader.xml" value="0.25" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/list_item_hitory.xml" value="0.176" />
         <entry key="..\:/Ramdhon/DICODING/BPAI/submission/app/src/main/res/layout/story_stack_widget.xml" value="0.234375" />

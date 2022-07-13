@@ -1,15 +1,12 @@
 package bpai.dicoding.storyapss.data.repository_impl
 
-import android.util.Log
 import androidx.paging.PagingSource
-import androidx.paging.PagingState
 import bpai.dicoding.storyapss.data.remote.local.stories.StoriesDao
 import bpai.dicoding.storyapss.data.remote.local.stories.StoriesEntity
 import bpai.dicoding.storyapss.data.remote.network.stories.IStoriesApi
 import bpai.dicoding.storyapss.domain.repository.IStoriesRepository
 import bpai.dicoding.storyapss.model.CreateStory
 import bpai.dicoding.storyapss.model.Stories
-import bpai.dicoding.storyapss.utils.ConstantName
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -65,7 +62,7 @@ class StoriesRepositoryImpl @Inject constructor(
 
     override fun getListHistoryToWidget(): Flow<ArrayList<Stories>> = flow {
         try {
-            val stories = storiesApi.stories()
+            val stories = storiesApi.stories(1,10)
             val data = arrayListOf<Stories>()
             stories.listStory.forEach {
                 data.add(it.toStories())
@@ -75,6 +72,22 @@ class StoriesRepositoryImpl @Inject constructor(
             emit(arrayListOf())
         }catch (e:Exception){
             emit(arrayListOf())
+        }
+    }
+
+    override fun getListStoryByLocation(): Flow<Result<List<Stories>>> = flow {
+        try {
+            val stories = storiesApi.stories(location = 1, size = 100)
+            if(stories.listStory.isNotEmpty()){
+                val data = stories.listStory.map { it.toStories() }
+                emit(Result.success(data))
+            }else{
+                emit(Result.success(arrayListOf()))
+            }
+        }catch (e:HttpException){
+            emit(Result.failure(RuntimeException(e.localizedMessage)))
+        }catch (e:Exception){
+            emit(Result.failure(RuntimeException(e.localizedMessage)))
         }
     }
 }

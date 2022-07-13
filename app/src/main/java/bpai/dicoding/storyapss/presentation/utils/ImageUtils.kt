@@ -2,10 +2,18 @@ package bpai.dicoding.storyapss.presentation.utils
 
 import android.app.Application
 import android.content.ContentResolver
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Canvas
 import android.net.Uri
+import androidx.annotation.ColorInt
+import androidx.annotation.DrawableRes
+import androidx.core.content.res.ResourcesCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import bpai.dicoding.storyapss.R
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -86,5 +94,20 @@ object ImageUtils {
         } catch (e: Exception) {
             null
         }
+    }
+
+    fun vectorToBitmap(context: Context,@DrawableRes id: Int, @ColorInt color: Int): BitmapDescriptor {
+        val vectorDrawable = ResourcesCompat.getDrawable(context.resources, id, null)
+            ?: return BitmapDescriptorFactory.defaultMarker()
+        val bitmap = Bitmap.createBitmap(
+            vectorDrawable.intrinsicWidth,
+            vectorDrawable.intrinsicHeight,
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        vectorDrawable.setBounds(0, 0, canvas.width, canvas.height)
+        DrawableCompat.setTint(vectorDrawable, color)
+        vectorDrawable.draw(canvas)
+        return BitmapDescriptorFactory.fromBitmap(bitmap)
     }
 }

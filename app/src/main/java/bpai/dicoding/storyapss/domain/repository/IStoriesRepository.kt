@@ -10,4 +10,5 @@ interface IStoriesRepository {
     fun getListStories():PagingSource<Int, StoriesEntity>
     suspend fun createStory(payload: CreateStory): Flow<Result<Pair<Boolean,String>>>
     fun getListHistoryToWidget():Flow<ArrayList<Stories>>
+    fun getListStoryByLocation():Flow<Result<List<Stories>>>
 }

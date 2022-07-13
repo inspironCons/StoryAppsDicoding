@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Story Apss</string>
+    <string name="api_key" translatable="false">AIzaSyByA9t2egf8PKfmz0A3Wgk4shwW2MlblgM</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
@@ -41,5 +42,7 @@
     <string name="geoLocationPermission">Get your precise location</string>
     <string name="location_not_found">Location is not found. Try Again</string>
     <string name="username">Username</string>
+    <string name="story_on_maps">Story On Maps</string>
+    <string name="title_activity_story_based_on_map">StoryBasedOnMap</string>
 
 </resources>

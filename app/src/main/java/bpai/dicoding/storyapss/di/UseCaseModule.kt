@@ -6,6 +6,8 @@ import bpai.dicoding.storyapss.domain.use_case.home.HomeUseCaseImpl
 import bpai.dicoding.storyapss.domain.use_case.home.IHomeUseCase
 import bpai.dicoding.storyapss.domain.use_case.login.ILoginUseCase
 import bpai.dicoding.storyapss.domain.use_case.login.LoginUseCaseImpl
+import bpai.dicoding.storyapss.domain.use_case.map.IStoryOnMapUseCase
+import bpai.dicoding.storyapss.domain.use_case.map.StoryOnMapUseCaseImpl
 import bpai.dicoding.storyapss.domain.use_case.register.IRegisterUseCase
 import bpai.dicoding.storyapss.domain.use_case.register.RegisterUseCaseImpl
 import dagger.Binds
@@ -27,4 +29,7 @@ abstract class UseCaseModule {
 
     @Binds
     abstract fun provideCreateStoryUseCase(createUseCase: CreateStoryUseCaseImpl): ICreateStoryUseCase
+
+    @Binds
+    abstract fun provideStoryMapsUseCase(storyMaps: StoryOnMapUseCaseImpl): IStoryOnMapUseCase
 }

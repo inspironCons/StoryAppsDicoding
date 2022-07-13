@@ -41,4 +41,5 @@
     <string name="geoLocationPermission">kirimkan lokasi kamu saat ini</string>
     <string name="location_not_found">Lokasi tidak ditemukan , silahkan coba lagi</string>
     <string name="username">Username</string>
+    <string name="story_on_maps">Cerita dalam Lokasi Map</string>
 </resources>

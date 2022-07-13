@@ -19,6 +19,7 @@ import bpai.dicoding.storyapss.model.Stories
 import bpai.dicoding.storyapss.presentation.BaseActivity
 import bpai.dicoding.storyapss.presentation.auth.login.LoginActivity
 import bpai.dicoding.storyapss.presentation.camera.CameraStoryActivity
+import bpai.dicoding.storyapss.presentation.story.base_on_maps.StoryBasedOnMap
 import bpai.dicoding.storyapss.presentation.story.detail.StoryActivity
 import bpai.dicoding.storyapss.utils.Session
 import dagger.hilt.android.AndroidEntryPoint
@@ -112,6 +113,11 @@ class HomeActivity : BaseActivity() {
                 }
                 R.id.logout->{
                     actionLogout()
+                    true
+                }
+                R.id.maps_location->{
+                    val mIntent = Intent(this,StoryBasedOnMap::class.java)
+                    startActivity(mIntent)
                     true
                 }
                 else->false

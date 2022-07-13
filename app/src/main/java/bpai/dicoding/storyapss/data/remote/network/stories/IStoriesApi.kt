@@ -7,8 +7,8 @@ import retrofit2.http.*
 interface IStoriesApi {
     @GET("stories")
     suspend fun stories(
-        @Query("page") page:Int = 1,
-        @Query("size") size:Int = 10,
+        @Query("page") page:Int? = null,
+        @Query("size") size:Int? = null,
         @Query("location") location:Byte = 0
     ): StoriesDto.StoriesResponse
 
