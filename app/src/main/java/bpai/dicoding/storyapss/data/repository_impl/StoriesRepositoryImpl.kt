@@ -77,7 +77,7 @@ class StoriesRepositoryImpl @Inject constructor(
 
     override fun getListStoryByLocation(): Flow<Result<List<Stories>>> = flow {
         try {
-            val stories = storiesApi.stories(location = 1, size = 100)
+            val stories = storiesApi.stories(location = 1)
             if(stories.listStory.isNotEmpty()){
                 val data = stories.listStory.map { it.toStories() }
                 emit(Result.success(data))
