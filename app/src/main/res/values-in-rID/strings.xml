@@ -42,4 +42,7 @@
     <string name="location_not_found">Lokasi tidak ditemukan , silahkan coba lagi</string>
     <string name="username">Username</string>
     <string name="story_on_maps">Cerita dalam Lokasi Map</string>
+    <string name="validation_password">Password minimal 6 karakter</string>
+    <string name="validation_email">Format Email Salah</string>
+
 </resources>

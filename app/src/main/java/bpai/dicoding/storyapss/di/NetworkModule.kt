@@ -48,8 +48,6 @@ class NetworkModule {
         .client(client)
         .build()
 
-    fun<T>buildService(service: Class<T>):T = provideRetrofit().create(service)
-
     @Provides
     fun provideLoginNetwork(retrofit: Retrofit):ILoginApi = retrofit.create(ILoginApi::class.java)
 

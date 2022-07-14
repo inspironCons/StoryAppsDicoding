@@ -1,11 +1,7 @@
 package bpai.dicoding.storyapss.presentation.homepage
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import androidx.paging.*
-import bpai.dicoding.storyapss.data.remote.local.remote_keys.RemoteKeysDao
-import bpai.dicoding.storyapss.data.remote.local.stories.StoriesDao
-import bpai.dicoding.storyapss.data.remote.local.stories.StoriesEntity
 import bpai.dicoding.storyapss.data.remote.local.stories.StoriesRemoteMediator
 import bpai.dicoding.storyapss.data.remote.network.stories.IStoriesApi
 import bpai.dicoding.storyapss.database.StoryDb

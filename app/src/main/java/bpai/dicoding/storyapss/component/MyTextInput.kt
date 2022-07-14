@@ -47,7 +47,7 @@ class MyTextInput: AppCompatEditText {
         val pattern = Patterns.EMAIL_ADDRESS
         if(!pattern.matcher(text).matches()){
             background =  resources.getDrawable(R.drawable.bg_form_error,null)
-            error = "Format Email Salah"
+            error = context.getString(R.string.validation_email)
         }else{
             background =  resources.getDrawable(R.drawable.bg_form,null)
             error = null
@@ -57,7 +57,7 @@ class MyTextInput: AppCompatEditText {
     private fun validatePassword(text:String){
         if(text.length < 6){
             background =  resources.getDrawable(R.drawable.bg_form_error,null)
-            error = "Password minimal 6 karakter"
+            error = context.getString(R.string.validation_password)
         }else{
             background = resources.getDrawable(R.drawable.bg_form,null)
             error = null

@@ -2,7 +2,6 @@ package bpai.dicoding.storyapss.presentation.story.base_on_maps
 
 import android.Manifest
 import android.content.Intent
-import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
@@ -21,7 +20,6 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
 import com.karumi.dexter.Dexter
@@ -60,6 +58,7 @@ class StoryBasedOnMap : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
+        mMap.uiSettings.isZoomControlsEnabled = true
         mapStyles()
         getMyLocation()
         locationIndonesiaSet()
@@ -151,12 +150,12 @@ class StoryBasedOnMap : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun setMarker(stories: List<Stories>) {
-        stories.forEach { stories->
-            val location = LatLng(stories.lat,stories.lon)
+        stories.forEach { _stories->
+            val location = LatLng(_stories.lat,_stories.lon)
             mMap.addMarker(MarkerOptions()
                 .position(location)
-                .title(stories.name)
-                .snippet(stories.description)
+                .title(_stories.name)
+                .snippet(_stories.description)
                 .icon(ImageUtils.vectorToBitmap(this,R.drawable.ic_location,getColor(R.color.coral)))
             )
         }

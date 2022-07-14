@@ -4,7 +4,6 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import bpai.dicoding.storyapss.model.Stories
-import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "stories")
 data class StoriesEntity(

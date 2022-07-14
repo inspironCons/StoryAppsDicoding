@@ -12,12 +12,11 @@ object ConstantName {
     const val PREFS_token = "token"
     const val PREFS_has_login = "hasLogin"
 
-    //page
-    const val FIRST_PAGE_HISTORY = 1
     const val PAGE_SIZE_HISTORY = 10
 
     //database
     const val DATABASE_NAME = "StoryApps"
     const val DATABASE_VERSION = 2
 
+    const val splashScreenTime:Long = 3000
 }
