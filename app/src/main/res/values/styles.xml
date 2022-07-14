@@ -13,10 +13,6 @@
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 
-    <style name="textColor.Day.Medium">
-        <item name="android:fontFamily">@font/roboto_medium</item>
-    </style>
-
     <style name="textColor.Day.Bold">
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
@@ -25,20 +21,12 @@
         <item name="android:textColor">@color/cream</item>
     </style>
 
-    <style name="textColor.Dark.Light">
-        <item name="android:fontFamily">@font/roboto_light</item>
-    </style>
-
     <style name="textColor.Dark.Regular">
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 
     <style name="textColor.Dark.Medium">
         <item name="android:fontFamily">@font/roboto_medium</item>
-    </style>
-
-    <style name="textColor.Dark.Bold">
-        <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
 
     <style name="ImageView" />
@@ -96,13 +84,4 @@
         <item name="android:letterSpacing">0.010</item>
     </style>
 
-    <style name="Widget.StoryApss.AppWidget.Container" parent="android:Widget">
-        <item name="android:id">@android:id/background</item>
-        <item name="android:background">?android:attr/colorBackground</item>
-    </style>
-
-    <style name="Widget.StoryApss.AppWidget.InnerView" parent="android:Widget">
-        <item name="android:background">?android:attr/colorBackground</item>
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
-    </style>
 </resources>

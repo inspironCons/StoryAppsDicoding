@@ -7,15 +7,10 @@
     <string name="create_account_story_app">Sign Up</string>
     <string name="register">Create Account</string>
     <string name="name">username</string>
-    <string name="lorem_ipsum">Lorem Ipsum</string>
-    <string name="title_cameras">Camera</string>
 
-    <string name="save">Save</string>
     <string name="need_permission">Need Permission</string>
     <string name="need_permission_desc">you need permission %s , goes to setting</string>
     <string name="go_to_setting">to Setting</string>
-    <string name="error_take_picture">Failure take a picture</string>
-    <string name="no_image">Image file not found</string>
     <string name="failed_launch_camera">Failure starting a Camera</string>
     <string name="chooser_image">Choose Image</string>
 
@@ -34,7 +29,6 @@
     <string name="register_now">Create Account Now</string>
     <string name="easy_register">Easy create Easy to Explore</string>
     <string name="appwidget_text">Story List Apps</string>
-    <string name="add_widget">Add widget</string>
     <string name="app_widget_description">This is an app widget description</string>
     <string name="not_data">No Data</string>
     <string name="upload">Upload</string>

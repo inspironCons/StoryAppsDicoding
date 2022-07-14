@@ -10,9 +10,7 @@
     <style name="textColor.Day.Regular">
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
-    <style name="textColor.Day.Medium">
-        <item name="android:fontFamily">@font/roboto_medium</item>
-    </style>
+
     <style name="textColor.Day.Bold">
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
@@ -21,17 +19,11 @@
         <item name="android:textColor">@color/cream</item>
     </style>
 
-    <style name="textColor.Dark.Light">
-        <item name="android:fontFamily">@font/roboto_light</item>
-    </style>
     <style name="textColor.Dark.Regular">
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
     <style name="textColor.Dark.Medium">
         <item name="android:fontFamily">@font/roboto_medium</item>
-    </style>
-    <style name="textColor.Dark.Bold">
-        <item name="android:fontFamily">@font/roboto_bold</item>
     </style>
 
     <style name="ImageView"/>
